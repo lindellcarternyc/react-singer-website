@@ -1,13 +1,15 @@
 import * as React from 'react'
 
-import { Container, Image } from 'semantic-ui-react'
+import { Image } from 'semantic-ui-react'
 const image = require('../../assets/lindell_picture.jpg')
+
+import Layout from '../layout'
 
 export const Home = (): JSX.Element => {
   return (
-    <Container style={{marginTop: '1rem'}}>
+    <Layout>
       <Image src={image} centered size="massive"/>
-    </Container>
+    </Layout>
   )
 }
 
