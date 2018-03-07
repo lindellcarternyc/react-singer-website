@@ -3,11 +3,16 @@ import * as React from 'react'
 import SiteHeaderText from '../site-header-text'
 import Navbar from './navbar'
 
-export const AppShell = (props: { pageNames: string[]}): JSX.Element => {
+interface AppShellProps {
+  pageNames: string[]
+  children?: React.ReactNode
+}
+export const AppShell = (props: AppShellProps): JSX.Element => {
   return(
     <React.Fragment>
       <SiteHeaderText />
       <Navbar pageNames={props.pageNames} currentPage="home" />
+      {props.children}
     </React.Fragment>
   )
 }

@@ -46,6 +46,7 @@ export class MobileAppShell extends React.Component<MobileAppShellProps, MobileA
           <Sidebar.Pusher>
             <MenuToggle onClick={this.toggleMenu} />
             <SiteHeaderText mobile />
+            {this.props.children}
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </>

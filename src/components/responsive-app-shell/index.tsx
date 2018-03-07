@@ -5,14 +5,18 @@ import { Responsive } from 'semantic-ui-react'
 import MobileAppShell from './components/mobile-app-shell'
 import AppShell from './components/app-shell'
 
-export const ResponsiveAppShell = (props: {pageNames: string[]}): JSX.Element => {
+interface ResponsiveAppShellProps {
+  pageNames: string[]
+  children?: React.ReactNode
+}
+export const ResponsiveAppShell = (props: ResponsiveAppShellProps): JSX.Element => {
   return (
     <>
       <Responsive {...Responsive.onlyMobile}>
-        <MobileAppShell pageNames={props.pageNames} />
+        <MobileAppShell pageNames={props.pageNames} children={props.children}/>
       </Responsive>
       <Responsive minWidth={Responsive.onlyMobile.maxWidth}>
-        <AppShell pageNames={props.pageNames} />
+        <AppShell pageNames={props.pageNames} children={props.children}/>
       </Responsive>
     </>
   )
