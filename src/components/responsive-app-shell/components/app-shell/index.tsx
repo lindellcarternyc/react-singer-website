@@ -5,13 +5,14 @@ import Navbar from './navbar'
 
 interface AppShellProps {
   pageNames: string[]
+  currentPage: string
   children?: React.ReactNode
 }
 export const AppShell = (props: AppShellProps): JSX.Element => {
   return(
     <React.Fragment>
       <SiteHeaderText />
-      <Navbar pageNames={props.pageNames} currentPage="home" />
+      <Navbar pageNames={props.pageNames} currentPage={props.currentPage} />
       {props.children}
     </React.Fragment>
   )

@@ -12,15 +12,15 @@ const MobileMenuItem = (props: MobileMenuItemProps): JSX.Element => (
 
 interface MobileMenuItemsProps {
   pageNames: string[]
-  activePageName: string
+  currentPage: string
 }
 const MobileMenuItems = (props: MobileMenuItemsProps): JSX.Element => {
-  const { pageNames, activePageName } = props
+  const { pageNames, currentPage } = props
   return (
     <>
     {pageNames.map(name => {
       return (
-        <MobileMenuItem key={name} name={name} active={name === activePageName} />
+        <MobileMenuItem key={name} name={name} active={name === currentPage} />
       )
     })}
     </>
@@ -30,13 +30,14 @@ const MobileMenuItems = (props: MobileMenuItemsProps): JSX.Element => {
 export interface MobileMenuProps {
   open: boolean
   pageNames: string[]
+  currentPage: string
   onClick: () => void
 }
 export const MobileMenu = (props: MobileMenuProps): JSX.Element => {
   return (
     <Sidebar as={Segment} visible={props.open} inverted onClick={() => { props.onClick() }}>
       <Menu inverted vertical secondary fluid>
-        <MobileMenuItems pageNames={props.pageNames} activePageName="home"/>
+        <MobileMenuItems pageNames={props.pageNames} currentPage={props.currentPage}/>
       </Menu>
     </Sidebar>
   )

@@ -7,16 +7,17 @@ import AppShell from './components/app-shell'
 
 interface ResponsiveAppShellProps {
   pageNames: string[]
+  currentPage: string
   children?: React.ReactNode
 }
 export const ResponsiveAppShell = (props: ResponsiveAppShellProps): JSX.Element => {
   return (
     <>
       <Responsive {...Responsive.onlyMobile}>
-        <MobileAppShell pageNames={props.pageNames} children={props.children}/>
+        <MobileAppShell {...props} />
       </Responsive>
       <Responsive minWidth={Responsive.onlyMobile.maxWidth}>
-        <AppShell pageNames={props.pageNames} children={props.children}/>
+        <AppShell {...props}/>
       </Responsive>
     </>
   )

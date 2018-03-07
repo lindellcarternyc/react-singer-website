@@ -19,6 +19,7 @@ const MenuToggle = (props: { onClick: () => void }): JSX.Element => {
 
 interface MobileAppShellProps {
   pageNames: string[]
+  currentPage: string
 }
 interface MobileAppShellState {
   menuOpen: boolean
@@ -38,11 +39,16 @@ export class MobileAppShell extends React.Component<MobileAppShellProps, MobileA
   }
   render() {
     const { menuOpen } = this.state
-    const { pageNames } = this.props
+    const { pageNames, currentPage } = this.props
     return (
       <>
         <Sidebar.Pushable as={Segment} style={{height: '100vh'}}>
-          <MobileMenu open={menuOpen} pageNames={pageNames} onClick={this.toggleMenu}/>
+          <MobileMenu 
+            open={menuOpen} 
+            pageNames={pageNames} 
+            onClick={this.toggleMenu} 
+            currentPage={currentPage}
+          />
           <Sidebar.Pusher>
             <MenuToggle onClick={this.toggleMenu} />
             <SiteHeaderText mobile />
