@@ -38,7 +38,7 @@ const PAGE_NAMES = PAGES.map(page => page.name)
 
 class App extends React.Component {
   render() {
-    const currentPage = PAGES[3]
+    const currentPage = PAGES[4]
     return (
       <ResponsiveAppShell pageNames={PAGE_NAMES} currentPage={currentPage.name}>
         {currentPage.render()}
