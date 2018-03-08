@@ -9,6 +9,8 @@ import ResponsiveAppShell from './components/responsive-app-shell'
 import Home from './pages/home'
 import About from './pages/about'
 import Upcoming from './pages/upcoming'
+import Photos from './pages/photos'
+import Recordings from './pages/recordings'
 
 const PAGES = [
   {
@@ -22,13 +24,21 @@ const PAGES = [
   {
     name: 'upcoming',
     render: () => <Upcoming />
+  },
+  {
+    name: 'photos',
+    render: () => <Photos />
+  },
+  {
+    name: 'recordings',
+    render: () => <Recordings />
   }
 ]
 const PAGE_NAMES = PAGES.map(page => page.name)
 
 class App extends React.Component {
   render() {
-    const currentPage = PAGES[2]
+    const currentPage = PAGES[3]
     return (
       <ResponsiveAppShell pageNames={PAGE_NAMES} currentPage={currentPage.name}>
         {currentPage.render()}
