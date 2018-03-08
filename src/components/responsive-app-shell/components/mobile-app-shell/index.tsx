@@ -3,6 +3,7 @@ import * as React from 'react'
 import { Segment, Button, Sidebar, } from 'semantic-ui-react'
 import SiteHeaderText from '../site-header-text'
 import MobileMenu from './mobile-menu'
+import Main from '../../../main'
 
 const MenuToggle = (props: { onClick: () => void }): JSX.Element => {
   return (
@@ -18,8 +19,7 @@ const MenuToggle = (props: { onClick: () => void }): JSX.Element => {
 }
 
 interface MobileAppShellProps {
-  pageNames: string[]
-  currentPage: string
+  // children?: 
 }
 interface MobileAppShellState {
   menuOpen: boolean
@@ -39,20 +39,17 @@ export class MobileAppShell extends React.Component<MobileAppShellProps, MobileA
   }
   render() {
     const { menuOpen } = this.state
-    const { pageNames, currentPage } = this.props
     return (
       <>
         <Sidebar.Pushable as={Segment} style={{height: '100vh'}}>
           <MobileMenu 
-            open={menuOpen} 
-            pageNames={pageNames} 
-            onClick={this.toggleMenu} 
-            currentPage={currentPage}
+            open={menuOpen}
+            onClick={this.toggleMenu}
           />
           <Sidebar.Pusher>
             <MenuToggle onClick={this.toggleMenu} />
             <SiteHeaderText mobile />
-            {this.props.children}
+            <Main />
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </>

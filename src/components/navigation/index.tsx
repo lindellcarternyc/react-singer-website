@@ -2,15 +2,19 @@ import * as React from 'react'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
 
 import NavigationItem from './components/navigation-item'
-import routes from '../../routes'
+import routes, { RouteProps } from '../../routes'
+
+const makeItems = (routeProps: RouteProps[], pathname: string): JSX.Element[] => {
+  return routeProps.map(route => {
+    const { name, path } = route
+    const active = path === pathname
+    return <NavigationItem key={name} name={name} path={path} active={active} />
+  })
+}
 
 export const Navigation = (props: RouteComponentProps<{}>): JSX.Element => (
   <>
-    {routes.map(route => {
-      const { path, name } = route
-      const active = path === props.location.pathname
-      return <NavigationItem key={name} path={path} name={name} active={active} />
-    })}
+    {makeItems(routes, props.location.pathname)}
   </>
 )
 

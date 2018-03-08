@@ -2,10 +2,9 @@ import * as React from 'react'
 
 import SiteHeaderText from '../site-header-text'
 import Navbar from './navbar'
+import Main from '../../../main'
 
 interface AppShellProps {
-  pageNames: string[]
-  currentPage: string
   children?: React.ReactNode
 }
 export const AppShell = (props: AppShellProps): JSX.Element => {
@@ -13,7 +12,7 @@ export const AppShell = (props: AppShellProps): JSX.Element => {
     <React.Fragment>
       <SiteHeaderText />
       <Navbar />
-      {props.children}
+      <Main />
     </React.Fragment>
   )
 }
