@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from 'react-router-dom'
 import { MenuItem } from 'semantic-ui-react'
 
-interface NavigationItemProps {
+export interface NavigationItemProps {
   name: string
   path: string
   active: boolean
