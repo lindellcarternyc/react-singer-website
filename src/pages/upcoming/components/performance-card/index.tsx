@@ -1,9 +1,7 @@
 import * as React from 'react'
 
-import { Segment, Header, Image } from 'semantic-ui-react'
-const defaultImage = require('../../../../assets/lindell_picture.jpg')
-
-import DateOverlay from './date-overlay'
+import { Segment, Header, Responsive, Grid } from 'semantic-ui-react'
+import PerformanceCardImage from './performance-card-image'
 
 interface PerformanceCardProps {
   date: string
@@ -14,34 +12,45 @@ interface PerformanceCardProps {
   link: string
 }
 
-const getDateForOverlay = (date: string): { month: string, day: string} => {
-  const [month, day] = date.split(', ')[1].split(' ')
-  return {
-    month: month.substring(0, 3),
-    day
-  }
+const PerformanceCardContent = (props: PerformanceCardProps) => {
+  return (
+    <>
+      <Header as="h3" content={props.title} />
+        <p>
+          {props.date}
+          <br />
+          {props.time}
+        </p>
+        <p>
+          {props.venue}
+          <br />
+          {props.location}
+        </p>
+        <p>
+          <a>{props.link}</a>
+        </p>
+    </>
+  )
 }
+
 export const PerformanceCard = (props: PerformanceCardProps) => {
-  const { month, day } = getDateForOverlay(props.date)
   return (
     <Segment style={{position: 'relative'}}>
-      <DateOverlay month={month} day={day}/>
-      <Image src={defaultImage} />
-      <Header as="h3" content="Madama Butterfly - Pinkerton" />
-      <p>
-        {props.date}
-        <br />
-        {props.time}
-      </p>
-      <p>
-        {props.venue}
-        <br />
-        {props.location}
-      </p>
-      <p>
-        <a>{props.link}</a>
-      </p>
-    </Segment>
+      <Responsive {...Responsive.onlyMobile}>
+        <PerformanceCardImage date={props.date} mobile />
+        <PerformanceCardContent {...props} />
+      </Responsive>
+      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+        <Grid columns={2}>
+          <Grid.Column>
+            <PerformanceCardImage date={props.date} />
+          </Grid.Column>
+          <Grid.Column>
+            <PerformanceCardContent {...props} />
+          </Grid.Column>
+        </Grid>
+      </Responsive>
+  </Segment>
   )
 }
 
