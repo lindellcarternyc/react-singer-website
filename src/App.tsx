@@ -1,10 +1,14 @@
 import * as React from 'react'
 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
 import ResponsiveAppShell from './components/responsive-app-shell'
 
 // const PAGES = [
 //   'home', 'about', 'upcoming', 'photos', 'recordings'
 // ]
+
+import routes, { RouteProps } from './routes'
 
 import Home from './pages/home'
 import About from './pages/about'
@@ -15,7 +19,7 @@ import Recordings from './pages/recordings'
 const PAGES = [
   {
     name: 'home',
-    render: () => <Home />
+    component: Home
   },
   {
     name: 'about',
@@ -34,15 +38,25 @@ const PAGES = [
     render: () => <Recordings />
   }
 ]
-const PAGE_NAMES = PAGES.map(page => page.name)
+
+const makeRoutes = (routeProps: RouteProps[]): JSX.Element[] => {
+  return routeProps.map(route => {
+    const { name, path, exact, component } = route
+    return <Route key={name} path={path} exact={exact} component={component} />
+  })
+}
 
 class App extends React.Component {
   render() {
     const currentPage = PAGES[4]
     return (
-      <ResponsiveAppShell pageNames={PAGE_NAMES} currentPage={currentPage.name}>
-        {currentPage.render()}
-      </ResponsiveAppShell>
+      <Router>
+        <ResponsiveAppShell currentPage={currentPage.name}>
+          <Switch>
+            {makeRoutes(routes)}
+          </Switch>
+        </ResponsiveAppShell>
+      </Router>
     )
   }
 }

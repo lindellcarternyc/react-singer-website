@@ -12,7 +12,7 @@ export const AppShell = (props: AppShellProps): JSX.Element => {
   return(
     <React.Fragment>
       <SiteHeaderText />
-      <Navbar pageNames={props.pageNames} currentPage={props.currentPage} />
+      <Navbar />
       {props.children}
     </React.Fragment>
   )

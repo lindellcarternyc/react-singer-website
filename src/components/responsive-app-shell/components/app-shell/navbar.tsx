@@ -1,12 +1,8 @@
 import * as React from 'react'
+import { withRouter, RouteComponentProps } from 'react-router-dom'
 
-import { Segment, Menu, MenuItem } from 'semantic-ui-react'
-
-const NavbarItem = (props: { pageName: string, active: boolean } ): JSX.Element => {
-  return (
-    <MenuItem as="a" name={props.pageName} active={props.active} />
-  )
-}
+import { Segment, Menu } from 'semantic-ui-react'
+import Navigation from '../../../navigation'
 
 type Widths = 1 | 2 | 3 | 4 | 5 | 6 | 7
 const getWidths = (numPages: number): Widths | undefined => {
@@ -22,18 +18,16 @@ const getWidths = (numPages: number): Widths | undefined => {
     default: return undefined
   }
 }
-const Navbar = (props: { pageNames: string[], currentPage: string }): JSX.Element => {
+import routes from '../../../../routes'
+const Navbar = (props: RouteComponentProps<{}>): JSX.Element => {
+  // const active = props.location.pathname === 
   return (
     <Segment inverted basic textAlign="center">
-      <Menu secondary pointing inverted widths={getWidths(props.pageNames.length)}>
-        {props.pageNames.map(pageName => {
-          return (
-            <NavbarItem key={pageName} pageName={pageName} active={pageName === props.currentPage} />
-          )
-        })}
+      <Menu secondary pointing inverted widths={getWidths(routes.length)}>
+        <Navigation />
       </Menu>
     </Segment>
   )
 }
 
-export default Navbar
+export default withRouter(Navbar)
