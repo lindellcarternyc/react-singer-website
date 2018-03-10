@@ -1,6 +1,6 @@
 import Home from './pages/home'
 import About from './pages/about'
-import Upcoming from './pages/upcoming'
+import Performances from './pages/peformances'
 import Photos from './pages/photos'
 import Recordings from './pages/recordings'
 
@@ -23,9 +23,9 @@ export const routes: RouteProps[] = [
       component: About
     },
     {
-      path: '/upcoming',
-      name: 'upcoming',
-      component: Upcoming
+      path: '/performances',
+      name: 'performances',
+      component: Performances
     },
     {
       path: '/photos',
