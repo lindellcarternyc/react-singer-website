@@ -3,14 +3,8 @@ import * as React from 'react'
 import { Segment, Header, Responsive, Grid } from 'semantic-ui-react'
 import PerformanceCardImage from './performance-card-image'
 
-interface PerformanceCardProps {
-  date: string
-  time: string
-  title: string
-  venue: string
-  location: string
-  link: string
-}
+import { PerformanceOverview } from '../../../../constants'
+interface PerformanceCardProps extends PerformanceOverview { }
 
 const PerformanceCardContent = (props: PerformanceCardProps) => {
   return (
@@ -21,14 +15,20 @@ const PerformanceCardContent = (props: PerformanceCardProps) => {
           <br />
           {props.time}
         </p>
-        <p>
-          {props.venue}
-          <br />
-          {props.location}
-        </p>
-        <p>
-          <a>{props.link}</a>
-        </p>
+        {props.venue !== undefined && props.location !== undefined && 
+          (<p>
+            {props.venue}
+            <br />
+            {props.location}
+          </p>)
+        }
+        {props.link !== undefined &&
+          (
+            <p>
+              <a>{props.link}</a>
+            </p>
+          )
+        }
     </>
   )
 }
