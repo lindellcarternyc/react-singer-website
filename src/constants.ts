@@ -9,6 +9,7 @@ export interface PerformanceOverview {
 }
 
 export interface PhotoCollection {
+  id: string
   name: string
   description: string
   photos: string[]
