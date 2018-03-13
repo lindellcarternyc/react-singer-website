@@ -7,3 +7,9 @@ export interface PerformanceOverview {
   location?: string
   link?: string
 }
+
+export interface PhotoCollection {
+  name: string
+  description: string
+  photos: string[]
+}

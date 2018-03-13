@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import PerformanceCardGroup from './components/performance-card-group'
 
 import { PerformanceOverview } from '../../constants'
-import { getPerformanceOverviews } from '../../databse'
+import { getPerformanceOverviews } from '../../database'
 import { hasPassed } from '../../utils'
 
 interface PerformancesProps { }

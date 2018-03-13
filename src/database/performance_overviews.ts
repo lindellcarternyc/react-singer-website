@@ -1,4 +1,4 @@
-import { PerformanceOverview } from './constants'
+import { PerformanceOverview } from '../constants'
 
 const PerformanceOverviews: PerformanceOverview[] = [
   {
@@ -21,4 +21,5 @@ const PerformanceOverviews: PerformanceOverview[] = [
   }
 ]
 
-export const getPerformanceOverviews = () => PerformanceOverviews
+const getPerformanceOverviews = () => PerformanceOverviews
+export default getPerformanceOverviews
