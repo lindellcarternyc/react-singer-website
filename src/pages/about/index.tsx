@@ -1,13 +1,11 @@
 import * as React from 'react'
 
-import { Header } from 'semantic-ui-react'
-
-import Layout from '../components/layout'
+// import Layout from '../components/layout'
+import Layout from '../shared/layout'
 
 export const About = (): JSX.Element => {
   return (
-    <Layout>
-      <Header as="h2" content="About Lindell" />
+    <Layout title={{content: 'About Lindell'}}>
       {/* <!-- start slipsum code --> */}
 
 {/* // tslint:disable-next-line:max-line-length */}

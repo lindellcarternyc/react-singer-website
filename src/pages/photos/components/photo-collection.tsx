@@ -14,7 +14,7 @@ export const PhotoCollectionView = (props: PhotoCollectionViewProps): JSX.Elemen
   const collection = getPhotoCollectionById(props.match.params.collectionId)
   return (
     <>
-      <Header as="h3">
+      <Header as="h2">
         {collection.name}
         <HeaderSubheader content={collection.description} />
       </Header>

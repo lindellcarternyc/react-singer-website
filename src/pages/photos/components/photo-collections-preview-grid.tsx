@@ -10,7 +10,7 @@ const PhotoCollections = getPhotoCollections()
 export const PhotoCollectionsPreviewGrid = (): JSX.Element => {
   return (
     <>
-      <Header as="h3" content="Photos" />
+      <Header as="h2" content="Photos" />
       <Grid centered doubling columns={4}>
         {PhotoCollections.map(collection => {
           return (

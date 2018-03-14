@@ -1,8 +1,9 @@
 import * as React from 'react'
 
-import { Header } from 'semantic-ui-react'
+// import { Header } from 'semantic-ui-react'
 
-import Layout from '../components/layout'
+// import Layout from '../components/layout'
+import Layout from '../shared/layout'
 import PerformanceCardGroup from './components/performance-card-group'
 
 import { PerformanceOverview } from '../../constants'
@@ -44,8 +45,14 @@ export class Performances extends React.Component<PerformancesProps, Performance
     const { upcoming, passed } = this.state
 
     return (
-      <Layout>
-        <Header as="h2" content="Performances" textAlign="center" style={{marginTop: '2rem'}}/>
+      <Layout 
+        title={{
+          content: 'Performances', 
+          align: 'center',
+          style: {marginTop: '2rem'}
+        }}
+      >
+        {/* <Header as="h2" content="Performances" textAlign="center" style={{marginTop: '2rem'}}/> */}
         <PerformanceCardGroup
           title="Upcoming"
           overviews={upcoming} 

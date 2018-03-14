@@ -3,7 +3,7 @@ import * as React from 'react'
 import { Image } from 'semantic-ui-react'
 const image = require('../../assets/lindell_picture.jpg')
 
-import Layout from '../components/layout'
+import Layout from '../shared/layout'
 
 export const Home = (): JSX.Element => {
   return (
