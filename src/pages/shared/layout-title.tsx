@@ -10,12 +10,19 @@ interface LayoutTitleObject {
 
 export type LayoutTitleProps = string | LayoutTitleObject
 export const LayoutTitle = (props: LayoutTitleProps): JSX.Element => {
-  if (typeof props === 'string') {
+  // console.dir(Object.keys(props))
+  if (Object.keys(props)[0] === '0') {
+    const title = Object.keys(props)
+      .reduce<string>(
+         (curTitle, idx) => {
+          return curTitle + props[idx]
+      }, '')
     return (
-      <Header as="h2" content={props} />
+      <Header as="h2" content={title} />
     )
   } else {
-    const { content, align, style } = props
+    const propsObj = props as LayoutTitleObject
+    const { content, align, style } = propsObj
     return (
       <Header 
         as="h2"
