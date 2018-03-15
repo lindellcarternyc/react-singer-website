@@ -10,8 +10,8 @@ const b7 = require('../../assets/images/madama_butterfly/img7.jpg')
 
 const MadamaButterflyPhotoCollection: PhotoCollection = {
   id: 'madama_butterfly',
-  name: 'Madama Butterfly',
-  description: 'Pinkerton with Regina Opera (Feb/Mar 2018)',
+  name: 'Pinkerton',
+  description: 'Madama Butterfly with Regina Opera (Feb/Mar 2018)',
   photos: [ b1, b2, b3, b4, b5, b6, b7 ]
 }
 
