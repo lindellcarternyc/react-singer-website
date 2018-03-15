@@ -1,7 +1,9 @@
 import * as React from 'react'
 
-// import Layout from '../components/layout'
+import { Image } from 'semantic-ui-react'
 import Layout from '../shared/layout'
+const Casual1 = require('../../assets/images/headshots/casual1.jpg')
+const Casual2 = require('../../assets/lindell_picture.jpg')
 
 export const About = (): JSX.Element => {
   return (
@@ -9,6 +11,7 @@ export const About = (): JSX.Element => {
       {/* <!-- start slipsum code --> */}
 
 {/* // tslint:disable-next-line:max-line-length */}
+    <Image src={Casual1} size="medium" floated="left" />
     <p>
       Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! 
       In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. 
@@ -23,6 +26,7 @@ export const About = (): JSX.Element => {
       You listen: we go in there, and that nigga Winston or anybody else is in there, 
       you the first motherfucker to get shot. You understand? 
     </p>
+    <Image src={Casual2} size="medium" floated="right" />
     <p>
       Now that there is the Tec-9, a crappy spray gun from South Miami. 
       This gun is advertised as the most popular gun in 
