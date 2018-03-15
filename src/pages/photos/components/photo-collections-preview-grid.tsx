@@ -11,7 +11,7 @@ export const PhotoCollectionsPreviewGrid = (): JSX.Element => {
   return (
     <>
       <Header as="h2" content="Photos" />
-      <Grid centered doubling columns={4}>
+      <Grid centered stackable columns={2}>
         {PhotoCollections.map(collection => {
           return (
             <GridColumn key={collection.id} >

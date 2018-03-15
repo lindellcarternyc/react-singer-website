@@ -18,7 +18,7 @@ export const PhotoCollectionView = (props: PhotoCollectionViewProps): JSX.Elemen
         {collection.name}
         <HeaderSubheader content={collection.description} />
       </Header>
-      <Grid columns={4} centered stackable>
+      <Grid columns={2} centered stackable>
         {collection.photos.map((photo, id) => {
           return (
             <GridColumn key={id}>
