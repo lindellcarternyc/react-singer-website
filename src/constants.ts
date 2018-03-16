@@ -14,3 +14,13 @@ export interface PhotoCollection {
   description: string
   photos: string[]
 }
+
+export type Role = string
+export interface Opera {
+  title: string
+  roles: Role[]
+}
+export interface ComposerData {
+  name: string
+  operas: Opera[]
+}
