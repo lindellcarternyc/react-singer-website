@@ -8,7 +8,6 @@ interface AboutNavLinkProps extends RouteComponentProps<{}> {
   content: string
 }
 export const AboutNavLink = (props: AboutNavLinkProps): JSX.Element => {
-  // const pathname = props.location.pathname
   const { route, content } = props
   const active = route === props.location.pathname
   return (

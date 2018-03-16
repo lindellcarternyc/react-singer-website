@@ -4,22 +4,23 @@ import { Breadcrumb, BreadcrumbDivider } from 'semantic-ui-react'
 
 import AboutNavLink from './about-nav-link'
 
-export const Routes = {
-  Resume: '/about/resume',
-  Repertoire: '/about/repertoire',
-  Bio: '/about'
+export const ROUTES = {
+  BIO: '/about',
+  RESUME: '/about/resume',
+  REPERTOIRE: '/about/repertoire'
 }
+
 const AboutNavStyle = {
   marginBottom: '1.5rem'
 }
 export const AboutNav = (): JSX.Element => {
   return (
     <Breadcrumb size="large" style={AboutNavStyle}>
-      <AboutNavLink content="Bio" route={Routes.Bio} />
+      <AboutNavLink content="Bio" route={ROUTES.BIO} />
       <BreadcrumbDivider />
-      <AboutNavLink content="Resume" route={Routes.Resume} />
+      <AboutNavLink content="Resume" route={ROUTES.RESUME} />
       <BreadcrumbDivider />
-      <AboutNavLink content="Repertoire" route={Routes.Repertoire}/>
+      <AboutNavLink content="Repertoire" route={ROUTES.REPERTOIRE}/>
     </Breadcrumb>
   )
 }

@@ -3,7 +3,7 @@ import * as React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Layout from '../shared/layout'
-import AboutNav, { Routes } from './about-nav'
+import AboutNav, { ROUTES } from './about-nav'
 import Bio from './bio'
 import Repertoire from './repertoire'
 import Resume from './resume'
@@ -13,9 +13,9 @@ export const About = (): JSX.Element => {
     <Layout title="About Lindell">
     <AboutNav />
     <Switch>
-      <Route path={Routes.Resume} component={Resume} />
-      <Route path={Routes.Repertoire} component={Repertoire} />
-      <Route exact path={Routes.Bio} component={Bio} />
+      <Route exact path={ROUTES.RESUME} component={Resume} />
+      <Route exact path={ROUTES.REPERTOIRE} component={Repertoire} />
+      <Route path={ROUTES.BIO} component={Bio} />
     </Switch>
     </Layout>
   )
