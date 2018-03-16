@@ -2,6 +2,15 @@ import { ComposerData } from '../constants'
 
 const RepertoireData: ComposerData[] = [
   {
+    name: 'Bizet',
+    operas: [
+      {
+        title: 'Carmen',
+        roles: ['Don Jose']
+      }
+    ]
+  },
+  {
     name: 'Donizetti',
     operas: [
       {
