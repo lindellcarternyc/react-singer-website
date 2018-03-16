@@ -4,10 +4,7 @@ import {
   Table, TableHeader, TableRow, TableHeaderCell, TableCell
 } from 'semantic-ui-react'
 
-import { ResumeData, RoleData } from '../../../constants'
-import { getResumeData } from '../../../database'
-
-const DATA: ResumeData = getResumeData()
+import { RoleData } from '../../../constants'
 
 const ResumeTableHeader = (): JSX.Element => {
   return (
@@ -35,11 +32,14 @@ const ResumeTableRow = (props: { data: RoleData }): JSX.Element => {
   )
 }
 
-export const ResumeTable = (): JSX.Element => {
+interface ResumeTableProps {
+  roles: RoleData[]
+}
+export const ResumeTable = (props: ResumeTableProps): JSX.Element => {
   return (
     <Table>
       <ResumeTableHeader />
-      {DATA.roles.map(roleData => {
+      {props.roles.map(roleData => {
         const key = roleData.role + '__' + roleData.dates
         return (
           <ResumeTableRow key={key} data={roleData}/>
