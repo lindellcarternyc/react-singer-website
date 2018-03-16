@@ -25,6 +25,18 @@ const RESUME_DATA: ResumeData = {
       operaTitle: 'Madama Butterfly',
       companyName: 'Regina Opera',
       dates: 'Feb/Mar 2018'
+    },
+    {
+      role: 'Riccardo',
+      operaTitle: 'Un Ballo in Maschera',
+      companyName: 'Reno Opera',
+      dates: 'Jan 2018'
+    },
+    {
+      role: 'Rodolfo',
+      operaTitle: 'La Boheme',
+      companyName: 'Concert Opera of NY',
+      dates: 'Jan 2018'
     }
   ]
 }
