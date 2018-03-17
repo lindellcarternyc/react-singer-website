@@ -24,3 +24,14 @@ export interface ComposerData {
   name: string
   operas: Opera[]
 }
+
+export interface RoleData {
+  role: Role
+  operaTitle: string
+  companyName: string
+  dates: string
+}
+
+export interface ResumeData {
+  roles: RoleData[]
+}
