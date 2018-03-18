@@ -10,25 +10,23 @@ export const Bio = () => {
     <Container fluid>
       <Image src={Casual1} size="medium" floated="left" />
       <p>
-        Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! 
-        In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. 
-        And most times they're friends, like you and me! I should've known way back when... 
-        You know why, David? Because of the kids. They called me Mr Glass. 
+        {/* TODO: Finish this... */}
+        A native of The Bronx, NY, Lindell O. Carter has been noted as 
+        "a promising young tenor ... [who] lacked nothing in power or finesse"
+        (<b>Classical Voice of North Carolina</b>) and for his "rich timbre 
+        and ringing, easy top (<b>London Herald</b>)." 
       </p>
       <p>
-        My money's in that office, right? If she start giving me some bullshit about it ain't there, 
-        and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. 
-        Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. 
-        She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.
-        You listen: we go in there, and that nigga Winston or anybody else is in there, 
-        you the first motherfucker to get shot. You understand? 
+        Recently, Mr. Carter returned to Regina Opera for his role debut as Pinkerton. His performances
+        were praised as "forceful and emotional (<b>Brooklyn Newspaper</b>)." This season Mr. Carter
+        is also excited to return for his 2nd season as a Mainstage Artist at Resonanz Opera. This summer there,
+        he'll reprise the role of the Duke in their production of <i>Rigoletto</i>.
       </p>
       <Image src={Casual2} size="medium" floated="right" />
       <p>
-        Now that there is the Tec-9, a crappy spray gun from South Miami. 
-        This gun is advertised as the most popular gun in 
-        American crime. Do you believe that shit? It actually says that in the little book that comes with it: 
-        the most popular gun in American crime. Like they're actually proud of that shit.
+        Singing a wide-ranging repertoire, recent highlights include the Title role in the 
+        New York Premiere of Donizetti's <i>Poliuto</i>, Vaudemont in Thaickovsky's <i>Iolanta</i>,
+        Among others...
       </p>
       <p>
         Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. 
