@@ -1,6 +1,6 @@
 import Home from './pages/home'
 import About from './pages/about'
-import Performances from './pages/peformances'
+import Performances from './pages/performances'
 import Photos from './pages/photos'
 import Recordings from './pages/recordings'
 
