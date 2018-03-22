@@ -1,10 +1,7 @@
 import * as React from 'react'
 
-// import { Header } from 'semantic-ui-react'
-
-// import Layout from '../components/layout'
-import Layout from '../shared/layout'
-import PerformanceCardGroup from './components/performance-card-group'
+import Layout from '../../components/layout'
+import PerformanceCardGroup from './performance-card-group'
 
 import { PerformanceOverview } from '../../constants'
 import { getPerformanceOverviews } from '../../database'

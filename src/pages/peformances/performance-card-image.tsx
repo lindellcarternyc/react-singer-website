@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import { Container, Image } from 'semantic-ui-react'
-const defaultImage = require('../../../assets/lindell_picture.jpg')
+const defaultImage = require('../../assets/lindell_picture.jpg')
 
 import DateOverlay from './date-overlay'
 

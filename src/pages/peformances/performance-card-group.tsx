@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import { Header } from 'semantic-ui-react'
-import { PerformanceOverview } from '../../../constants'
+import { PerformanceOverview } from '../../constants'
 import PerformanceCard from './performance-card'
 
 interface PerformanceCardGroupProps {

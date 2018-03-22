@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import PassedDateCross from './passed-date-cross'
 
-import { formatDate, hasPassed } from '../../../../utils'
+import { formatDate, hasPassed } from '../../../utils'
 
 const makeStylesForOverlay = (mobile: boolean = false) => {
   const baseStyles = {

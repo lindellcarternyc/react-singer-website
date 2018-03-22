@@ -3,7 +3,7 @@ import * as React from 'react'
 import { Segment, Header, Responsive, Grid } from 'semantic-ui-react'
 import PerformanceCardImage from './performance-card-image'
 
-import { PerformanceOverview } from '../../../constants'
+import { PerformanceOverview } from '../../constants'
 interface PerformanceCardProps extends PerformanceOverview { }
 
 const PerformanceCardContent = (props: PerformanceCardProps) => {
