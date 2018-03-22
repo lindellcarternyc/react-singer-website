@@ -2,8 +2,8 @@ import * as React from 'react'
 
 import { SidebarPushable, SidebarPusher, Segment } from 'semantic-ui-react'
 
-import MenuToggle from './components/menu-toggle'
-import Menu from './components/menu'
+import MenuToggle from './menu-toggle'
+import Menu from './menu'
 import SiteHeader from '../../components/site-header'
 import Main from '../../components/main'
 
