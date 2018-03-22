@@ -4,8 +4,8 @@ import { SidebarPushable, SidebarPusher, Segment } from 'semantic-ui-react'
 
 import MenuToggle from './menu-toggle'
 import Menu from './menu'
-import SiteHeader from '../../components/site-header'
-import Main from '../../components/main'
+import SiteHeader from '../site-header'
+import Main from '../main'
 
 interface MobileAppShellProps {
 

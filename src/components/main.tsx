@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import routes, { RouteProps } from '../../routes'
+import routes, { RouteProps } from '../routes'
 const makeRoutes = (routeProps: RouteProps[]): JSX.Element[] => {
   return routeProps.map(route => {
     const { name, path, exact, component } = route
