@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Layout from '../shared/layout'
+import Layout from '../../components/layout'
 import RecordingsNav, { VideosRoute, AudioRoute } from './recordings-nav'
 import Videos from './videos'
 import Audio from './audio'
