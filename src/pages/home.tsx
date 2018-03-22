@@ -1,9 +1,9 @@
 import * as React from 'react'
 
 import { Image } from 'semantic-ui-react'
-const image = require('../../assets/lindell_picture.jpg')
+const image = require('../assets/lindell_picture.jpg')
 
-import Layout from '../shared/layout'
+import Layout from '../components/layout'
 
 export const Home = (): JSX.Element => {
   return (
