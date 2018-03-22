@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Sidebar, Segment } from 'semantic-ui-react'
-import Navigation from '../../navigation'
+import Navigation from '../navigation'
 
 interface MenuProps {
   visible: boolean

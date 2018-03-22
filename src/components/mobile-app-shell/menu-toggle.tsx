@@ -7,7 +7,7 @@ interface MenuToggleProps {
 }
 export const MenuToggle = (props: MenuToggleProps): JSX.Element => {
   return (
-    <Segment basic inverted textAlign="center">
+    <Segment basic inverted>
       <Button 
         basic
         inverted
