@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Grid, GridColumn, Header } from 'semantic-ui-react'
 import PhotoCollectionPreviewCard from './photo-collection-preview-card'
 
-import { getPhotoCollections } from '../../../database'
+import { getPhotoCollections } from '../../database'
 const PhotoCollections = getPhotoCollections()
 
 export const PhotoCollectionsPreviewGrid = (): JSX.Element => {

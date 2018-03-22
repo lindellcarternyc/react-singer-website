@@ -2,8 +2,8 @@ import * as React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import Layout from '../components/layout'
-import PhotoCollectionsPreviewGrid from './components/photo-collections-preview-grid'
-import PhotoCollectionView from './components/photo-collection'
+import PhotoCollectionsPreviewGrid from './photo-collections-preview-grid'
+import PhotoCollectionView from './photo-collection'
 
 export const Photos = (): JSX.Element => (
   <Layout>

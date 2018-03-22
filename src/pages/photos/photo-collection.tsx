@@ -3,7 +3,7 @@ import { withRouter, RouteComponentProps } from 'react-router-dom'
 
 import { Header, HeaderSubheader, Grid, GridColumn, Image } from 'semantic-ui-react'
 
-import { getPhotoCollectionById } from '../../../database'
+import { getPhotoCollectionById } from '../../database'
 
 interface RouteProps {
   collectionId: string

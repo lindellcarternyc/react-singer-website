@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import { Card, CardHeader, CardContent, CardDescription, Image } from 'semantic-ui-react'
-import { PhotoCollection } from '../../../constants'
+import { PhotoCollection } from '../../constants'
 
 interface PhotoCollectionPreviewCardProps extends PhotoCollection { }
 
