@@ -2,7 +2,7 @@ import * as React from 'react'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
 
 import { Menu, Segment } from 'semantic-ui-react'
-import NavigationItems from './components/navigation-items'
+import NavigationItems from './navigation-items'
 import routes from '../../routes'
 
 type Widths = 1 | 2 | 3 | 4 | 5 | 6 | 7
