@@ -4,6 +4,7 @@ import { Segment, Button } from 'semantic-ui-react'
 
 interface MenuToggleProps {
   onClick: () => void
+  menuVisible: boolean
 }
 export const MenuToggle = (props: MenuToggleProps): JSX.Element => {
   return (
@@ -11,7 +12,7 @@ export const MenuToggle = (props: MenuToggleProps): JSX.Element => {
       <Button 
         basic
         inverted
-        content="Menu"
+        icon={props.menuVisible ? 'close' : 'bars'}
         onClick={props.onClick}
       />
     </Segment>

@@ -33,7 +33,7 @@ export class MobileAppShell extends React.Component<MobileAppShellProps, MobileA
         <SidebarPushable as={Segment} style={{height: '100vh'}}>
           <Menu visible={menuVisible} onClick={this.toggleMenu} />
           <SidebarPusher>
-            <MenuToggle onClick={this.toggleMenu} />
+            <MenuToggle onClick={this.toggleMenu} menuVisible={menuVisible}/>
             <SiteHeader mobile />
             <Main />
           </SidebarPusher>
