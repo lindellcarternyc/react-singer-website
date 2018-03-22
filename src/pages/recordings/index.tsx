@@ -2,9 +2,9 @@ import * as React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Layout from '../shared/layout'
-import RecordingsNav, { VideosRoute, AudioRoute } from './components/recordings-nav'
-import Videos from './components/videos'
-import Audio from './components/audio'
+import RecordingsNav, { VideosRoute, AudioRoute } from './recordings-nav'
+import Videos from './videos'
+import Audio from './audio'
 
 interface RecordingsProps { }
 export const Recordings = (props: RecordingsProps) => {
