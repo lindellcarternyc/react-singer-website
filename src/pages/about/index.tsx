@@ -2,7 +2,8 @@ import * as React from 'react'
 
 import { Switch, Route } from 'react-router-dom'
 
-import Layout from '../shared/layout'
+import Layout from '../../components/layout'
+
 import AboutNav, { ROUTES } from './about-nav'
 import Bio from './bio'
 import Repertoire from './repertoire'
