@@ -1,28 +1,12 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom'
-
-import { Grid, GridColumn, Header } from 'semantic-ui-react'
-import PhotoCollectionPreviewCard from './photo-collection-preview-card'
 
 import { getPhotoCollections } from '../../database'
-const PhotoCollections = getPhotoCollections()
+const AllCollections = getPhotoCollections()
+import PhotoCollections from '../../components/photo-collections'
 
 export const PhotoCollectionsPreviewGrid = (): JSX.Element => {
   return (
-    <>
-      <Header as="h2" content="Photos" />
-      <Grid centered stackable columns={2}>
-        {PhotoCollections.map(collection => {
-          return (
-            <GridColumn key={collection.id} >
-              <Link to={`/photos/${collection.id}`}>
-                <PhotoCollectionPreviewCard {...collection} />
-              </Link>
-            </GridColumn>
-          )
-        })}
-      </Grid>
-    </>
+    <PhotoCollections collections={AllCollections} />
   )
 }
 
