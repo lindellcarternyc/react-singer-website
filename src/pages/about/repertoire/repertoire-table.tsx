@@ -9,7 +9,6 @@ import {
 import { ComposerData } from '../../../constants'
 import { getRepertoireData } from '../../../database'
 const alldata = getRepertoireData()
-console.dir(alldata)
 
 const RepertoireTableHead = (): JSX.Element => {
   return (
