@@ -3,12 +3,12 @@ import * as React from 'react'
 import SiteHeader from './site-header'
 import Navigation from './navigation'
 import Main from './main'
-import PhotoCollectionGallery from './photo-collection-gallery'
+import ModalPhotoGallery from './modal-photo-gallery'
 
 export const DesktopAppShell = (): JSX.Element => {
   return (
     <>
-      <PhotoCollectionGallery />
+      <ModalPhotoGallery />
       <SiteHeader />
       <Navigation />
       <Main />
