@@ -6,6 +6,7 @@ import MenuToggle from './menu-toggle'
 import Menu from './menu'
 import SiteHeader from '../site-header'
 import Main from '../main'
+import PhotoCollectionGallery from '../photo-collection-gallery'
 
 interface MobileAppShellProps {
 
@@ -30,6 +31,7 @@ export class MobileAppShell extends React.Component<MobileAppShellProps, MobileA
     const { menuVisible } = this.state
     return (
       <>
+        <PhotoCollectionGallery />
         <SidebarPushable as={Segment} style={{height: '100vh'}}>
           <Menu visible={menuVisible} onClick={this.toggleMenu} />
           <SidebarPusher>
