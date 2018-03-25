@@ -20,7 +20,11 @@ interface SelectPhotoAction {
     photoIndex: number
   }
 }
-type Action = SelectPhotoAction
+interface CloseGalleryAction {
+  type: 'Close Gallery'
+}
+
+type Action = SelectPhotoAction | CloseGalleryAction
 export const selectPhoto = (photoCollection: PhotoCollection, photoIndex: number): SelectPhotoAction => {
   return {
     type: 'Select Photo',
@@ -29,12 +33,22 @@ export const selectPhoto = (photoCollection: PhotoCollection, photoIndex: number
     }
   }
 }
+export const closeGallery = (): CloseGalleryAction => {
+  return { type: 'Close Gallery' }
+}
 
 const rootReducer: Reducer<StoreState> = (state: StoreState = InitialState, action: Action): StoreState => {
   switch ( action.type ) {
     case 'Select Photo':
       const { photoCollection, photoIndex } = action.payload
       return { ...state, photoGalleryOpen: true, photoCollection, photoIndex }
+    case 'Close Gallery':
+      return {
+        ...state,
+        photoGalleryOpen: false,
+        photoCollection: null,
+        photoIndex: null
+      }
     default:
       return state
   }
