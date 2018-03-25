@@ -1,0 +1,9 @@
+.photo-gallery {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 8rem);
+  max-width: 1000px;
+  box-sizing: content-box;
+  text-align: center;
+}
