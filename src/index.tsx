@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 import 'semantic-ui-css/semantic.min.css'
+import 'video-react/dist/video-react.css'
 
 import { BrowserRouter as Router } from 'react-router-dom'
 import { initStore } from './store'
