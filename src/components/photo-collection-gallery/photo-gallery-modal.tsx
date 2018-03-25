@@ -27,7 +27,7 @@ class PhotoGalleryModal extends React.Component<PhotoGalleryModalProps, PhotoGal
   componentWillReceiveProps(nextProps: PhotoGalleryModalProps) {
     this.setState({ photoIndex: nextProps.startIndex })
   }
-  
+
   get className(): string {
     return `photo-gallery-modal ${this.props.isOpen ? 'open' : ''}`
   }
